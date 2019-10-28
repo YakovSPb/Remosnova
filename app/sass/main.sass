@@ -8,7 +8,8 @@
 ::selection
 	background-color: $accent
 	color: #fff
-
+a
+	color: $accent
 input, textarea
 	outline: none
 	&:focus:required:invalid
@@ -30,21 +31,22 @@ h1, .h1
 	font-weight: 500
 	color: #000
 	font-size: 36px
-	margin-bottom: 20px
+	margin: 25px 0
+	text-align: center
+	line-height: 36px
 
 h2, .h2
 	font-weight: 500
 	color: #000
-	margin-top: 40px
-	margin-bottom: 25px
+	margin: 40px auto 25px auto
+	text-align: center
 
 .btn
 	max-width: 370px
 	width: 100%
 	height: 60px
 	display: block
-	background: url(../img/@2x/button_bg_01.png) center
-	background-size: cover
+	background: linear-gradient(180deg, #ed3434, #fd5c26)
 	box-shadow: #fff 0 0 0 4px, #f69999 0 0 0 5px
 	font-weight: 500
 	color: #fff
@@ -56,3 +58,418 @@ h2, .h2
 	display: block
 	max-width: 100%
 	height: auto
+
+// HEADER
+.header
+	margin-top: 30px
+	.logo
+		&__losung
+			font-family: 'Rubik', sans-serif
+			text-transform: uppercase
+			font-weight: 500
+			font-size: 15px
+			letter-spacing: 2.5px
+			text-align: center
+			margin-top: 2px
+	.contact
+		text-align: right
+		height: 100%
+		font-size: 18px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		a
+			color: #000
+		&__phone
+			font-size: 24px
+			a
+				color: $accent
+			span
+				font-size: 30px
+	.info
+		height: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&__social
+			img
+				margin-right: 10px
+		&__adress
+			font-size: 18px
+		&__bank
+			font-size: 14px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 7px
+			span
+				line-height: 16px
+			img
+				line-height: 16px
+	.head_button
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		height: 100%
+		img
+			width: 25px
+			height: 25px
+			margin-bottom: 10px
+			margin-right: 10px
+		.btn
+			box-shadow: none
+			font-size: 20px
+			color: #fff
+			font-weight: 500
+			height: 50px
+			line-height: 50px
+			text-align: center
+			max-width: 270px
+			width: 100%
+			&:hover
+				color: inherit
+				text-decoration: none
+				color: #fff	
+nav
+	background: linear-gradient(180deg, #ed3434, #fd5c26)
+	margin: 20px 0 30px
+	.main-menu
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		list-style-type: none
+		margin: 0
+		padding: 0
+		.active
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				background: url('../img/@2x/arrow_down.png')
+				width: 14px
+				height: 7px
+				bottom: -7px
+				margin-left: -7px
+				left: 50%
+		li
+			position: relative
+			&:last-child
+				&:after
+					display: none
+			&:first-child
+				&:hover
+					background-color: transparent
+			&:hover
+					background-color: #fff		
+			&:after
+				content: ''
+				position: absolute
+				top: 15px
+				right: 0
+				height: 25px
+				width: 2px
+				background-color: #fff
+				opacity: .25
+			a
+				font-size: 18px
+				color: #fff
+				line-height: 54px
+				padding: 0 16px
+				white-space: nowrap
+				height: 54px
+				display: block
+				&:hover
+					color: $accent
+					text-decoration: none
+
+// PROMO SLIDER			
+.promo
+	position: relative
+	&__item
+		position: relative
+	&__text
+		position: absolute
+		top: 46px
+		left: 46px
+		color: #fff
+	&__title
+		font-weight: 500
+		font-size: 36px
+		line-height: 36px
+		span
+			font-size: 48px
+	&__desc
+		margin-top: 20px
+		font-size: 30px
+		line-height: 38px
+		max-width: 390px
+
+
+.slick-dots
+	display: inline-block
+	list-style-type: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	padding: 0
+	.slick-active
+		background-color: #fff
+	li
+		height: 12px!important
+		width: 12px!important
+		border-radius: 100%
+		border: 2px solid #fff
+		margin-right: 6px
+		&:last-child
+			margin-right: 0
+	button
+		border: none
+		box-shadow: none
+		background-color: transparent
+		color: transparent
+
+.dots_wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	position: absolute
+	bottom: 0
+	left: 37px
+	.right_arrow
+		position: absolute
+		top: -10px
+		right: -19px
+		cursor: pointer
+	.left_arrow
+		position: absolute
+		top: -4px
+		left: -19px
+		transform: scale(-1, -1)
+		cursor: pointer
+
+// SERVICES
+.services
+	a
+			text-decoration: none
+	&__item
+		max-width: 270px
+		width: 100%
+		height: 306px
+		padding: 5px 5px
+		text-align: center
+		color: #000
+		border: 5px solid transparent
+		border-image: linear-gradient(180deg, #ed3434, #fd5c26)
+		border-image-slice: 1	
+		position: relative
+		text-align: center
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		box-shadow: 5px 7px 15px -5px rgba(0,0,0,0.75)
+		&:hover
+			text-decoration: none
+			box-shadow: #fff 0 0 0 4px, #f5a18c 0 0 0 5px
+			strong
+				color: $accent
+		strong
+			font-weight: 500
+			font-size: 19px
+			line-height: 19px
+		>p
+			font-size: 16px
+			margin-top: 15px
+			color: $accent
+			>span
+				font-weight: bold
+		img
+			width: 276px
+			height: 150px
+			position: absolute
+			left: -10px
+			top: 15px
+	&__item-sele
+		position: absolute
+		width: 183px
+		height: 59px
+		top: 106px
+		left: -10px
+		background: url('../img/@2x/rectagle_bg.png')
+		z-index: 1000
+		padding-top: 10px
+		p
+			margin: 0
+			font-size: 23px
+			color: #fff
+			line-height: 23px
+			span
+				font-size: 30px
+				font-weight: 500
+			&:last-child
+				font-size: 13px
+				line-height: 15px
+				margin-top: 2px
+
+// ABOUT_US
+.about_us
+	margin-top: 30px
+	.like_slider
+		position: relative
+		img
+			width: 100%
+		&__wrap
+			position: absolute
+			top: 40px
+			left: 90px
+			max-width: 465px
+			p:first-child
+				font-size: 22px
+				line-height: 26px
+				strong
+					font-weight: 500px
+			p:last-child
+				padding-left: 70px
+				font-size: 16px
+				line-height: 22px
+				position: relative
+				img
+					width: 40px
+					height: 40px
+					position: absolute
+					top: 0
+					left: 0
+
+// ADVANTAGE
+.advantage
+	&__item
+		font-size: 18px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		margin-bottom: 28px
+	&__img
+		margin-right: 30px
+	&__text
+		line-height: 24px
+
+// VIEWS
+.views
+	a
+		&:hover
+			text-decoration: none
+			color: #fff
+			transition: background-color .5s ease
+			.views__item
+				background-color: #fe5c26
+	&__item
+		padding: 4px
+		border: 1px solid #f79d98
+		position: relative
+		&:after
+			content: ''
+			background: url('../img/@2x/camera.png') 
+			position: absolute
+			bottom: 67px
+			right: 9px
+			width: 58px
+			height: 48px
+			z-index: 1000
+		img
+			width: 100%
+		p
+			font-size: 19px
+			line-height: 24px
+			text-align: center
+			margin-bottom: 0
+			padding: 5px 0
+
+// PORTFOLIO
+.portfolio
+	&__wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		width: 100%
+		a
+			color: #000
+			transition: all .5s ease
+			text-decoration: none
+			display: block
+			&:hover
+				transition: all .5s ease
+				p
+					color: $accent
+	&__item
+		max-width: 210px
+		span
+			font-size: 12px
+			display: block
+			margin-top: 12px
+			margin-bottom: 4px
+		p
+			font-size: 18px
+			line-height: 24px
+			text-decoration: underline
+			transition: color .5s ease
+		img
+			width: 100%
+			height: auto
+			text-align: center
+			color: #000
+			border: 5px solid transparent
+			border-image: linear-gradient(180deg, #ed3434, #fd5c26)
+			border-image-slice: 1
+
+// MEDIA-SLIDER
+.media-slider
+	margin-top: 30px
+	&__wrap
+		max-width: 670px
+		margin: 0 auto
+	&__item
+		border: 5px solid $accent
+		padding: 40px
+	.slick-arrow
+		position: absolute
+		cursor: pointer
+		top: 50%
+		margin-top: -20px
+		transition: all .5s ease
+		&:hover
+			opacity: .7
+	.y_prevArrow
+		transform: scale(-1, -1)
+		left: -70px
+	.y_nextArrow
+		right: -70px
